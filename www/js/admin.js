@@ -51,6 +51,10 @@ $(document).ready(function(){
 			//alert($("#hidusrid").val());
 			if(sdsresult!="")
             window.location.href = sdsresult+'?user=' + btoa($("#hidusrid").val()) + '';
+			else{
+				showUserRecords();alert(user+pass);
+				window.location.href = sdsresult+'?user=' + btoa($("#hidusrid").val()) + '';
+			}
         });
 		
 		$("#Logout").click(function() {
