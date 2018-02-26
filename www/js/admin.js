@@ -55,6 +55,7 @@ $(document).ready(function(){
 				showUserRecords();alert(user+pass);
 				window.location.href = sdsresult+'?user=' + btoa($("#hidusrid").val()) + '';
 			}
+			 $("#loading").hide();
         });
 		
 		$("#Logout").click(function() {
