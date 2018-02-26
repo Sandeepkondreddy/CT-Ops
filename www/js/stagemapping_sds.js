@@ -18,7 +18,7 @@ $(document).ready(function (){
     $("#home").click(function () {
         $.ajax({
             type: "GET",
-		url: "http://apps.kpcl.com/KPCLOpsAPI/api/Account/GetUserScreens/" + $("#hidusrid").val(),
+		url: "http://apps.kpcl.com/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
             //url: "http://202.83.27.199/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
 	    //url: "http://182.72.244.25/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
             data: '{}',
@@ -88,7 +88,7 @@ $(document).ready(function (){
             }
             $.ajax({
                 type: 'POST',
-		    url: 'http://apps.kpcl.com/KPCLOpsAPI/api/Account/AddUserStages',
+		    url: 'http://apps.kpcl.com/KPCTSDS/api/Account/AddUserStages',
                 //url: 'http://202.83.27.199/KPCTSDS/api/Account/AddUserStages',
 		//url: 'http://182.72.244.25/KPCTSDS/api/Account/AddUserStages',
                 dataType: "json",
@@ -98,7 +98,7 @@ $(document).ready(function (){
                     alert('Stages Mapped Successfully.');
                     $.ajax({
                         type: "GET",
-			    url: "http://apps.kpcl.com/KPCLOpsAPI/api/Account/GetUserScreens/" + $("#hidusrid").val(),
+			    url: "http://apps.kpcl.com/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
                         //url: "http://202.83.27.199/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
 			//url: "http://182.72.244.25/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
                         data: '{}',
@@ -178,7 +178,7 @@ function GetUsers()
     $.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
-	    url: 'http://apps.kpcl.com/KPCLOpsAPI/api/Account/GetUsers',
+	    url: 'http://apps.kpcl.com/KPCTSDS/api/Account/GetUsers',
         //url: 'http://202.83.27.199/KPCTSDS/api/Account/GetUsers',
 	//url: 'http://182.72.244.25/KPCTSDS/api/Account/GetUsers',
         dataType: "json",
@@ -201,7 +201,7 @@ function GetStages()
     $.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
-	    url: 'http://apps.kpcl.com/KPCLOpsAPI/api/Masters/GetStatus',
+	    url: 'http://apps.kpcl.com/KPCTSDS/api/Masters/GetStatus',
         //url: 'http://202.83.27.199/KPCTSDS/api/Masters/GetStatus',
 	//url: 'http://182.72.244.25/KPCTSDS/api/Masters/GetStatus',
         dataType: "json",
@@ -232,7 +232,7 @@ function GetUserStages(userid)
 {
     usrStages = [];
     $.ajax({
-	    url: 'http://apps.kpcl.com/KPCLOpsAPI/api/Account/GetUserStages/' + userid,
+	    url: 'http://apps.kpcl.com/KPCTSDS/api/Account/GetUserStages/' + userid,
         //url: 'http://202.83.27.199/KPCTSDS/api/Account/GetUserStages/' + userid,
 	//url: 'http://182.72.244.25/KPCTSDS/api/Account/GetUserStages/' + userid,
         type: 'GET',

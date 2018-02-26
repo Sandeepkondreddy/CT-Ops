@@ -120,8 +120,8 @@ $(document).ready(function () {
         $("#loading").show();
         $.ajax({
             type: "GET",
-            //url: "http://apps.kpcl.com/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
-			url: "http://apps.kpcl.com/KPCLOpsAPI/api/User/GetUserScreens/" + $("#hidusrid").val(),
+            url: "http://apps.kpcl.com/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
+			
 	    //url: "http://202.83.27.199/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
 	    //url: "http://182.72.244.25/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
             data: '{}',
@@ -260,7 +260,7 @@ $(document).ready(function () {
             Adddata.User = $("#hidusrid").val();
             $.ajax({
                 type: 'POST',
-                url: 'http://apps.kpcl.com/KPCLOpsAPI/api/TruckDetails/AddData',
+                url: 'http://apps.kpcl.com/KPCTSDS/api/TruckDetails/AddData',
 		//  url: 'http://202.83.27.199/KPCTSDS/api/TruckDetails/AddData',
 		//url: 'http://182.72.244.25/KPCTSDS/api/TruckDetails/AddData',
                 dataType: "json",
@@ -287,7 +287,7 @@ function GetUserStages(userid)
     var obj = $("#hidNewStatus").val(),
         alocid = $("#hidloctype").val();
     $.ajax({
-	    url: 'http://apps.kpcl.com/KPCLOpsAPI/api/Account/GetUserStages/' + userid,
+	    url: 'http://apps.kpcl.com/KPCTSDS/api/Account/GetUserStages/' + userid,
         //url: 'http://202.83.27.199/KPCTSDS/api/Account/GetUserStages/' + userid,
 	//url: 'http://182.72.244.25/KPCTSDS/api/Account/GetUserStages/' + userid,
         type: 'GET',
@@ -319,7 +319,7 @@ function GetTruckDetails(truckno)
     if(trkno != "")
     {
         $.ajax({
-		url: 'http://apps.kpcl.com/KPCLOpsAPI/api/TruckDetails/GetTruckDetails/' + trkno,
+		url: 'http://apps.kpcl.com/KPCTSDS/api/TruckDetails/GetTruckDetails/' + trkno,
             //url: 'http://202.83.27.199/KPCTSDS/api/TruckDetails/GetTruckDetails/' + trkno,
 	    //url: 'http://182.72.244.25/KPCTSDS/api/TruckDetails/GetTruckDetails/' + trkno,
             type: 'GET',
@@ -386,7 +386,7 @@ function GetTag_TruckDetails(tagno)
     if(TagNo != "")
     {
         $.ajax({
-		url: 'http://apps.kpcl.com/KPCLOpsAPI/api/TruckDetails/GetTagTruckDetails/' + TagNo,
+		url: 'http://apps.kpcl.com/KPCTSDS/api/TruckDetails/GetTagTruckDetails/' + TagNo,
             //url: 'http://202.83.27.199/KPCTSDS/api/TruckDetails/GetTagTruckDetails/' + TagNo,
 	    //url: 'http://182.72.244.25/KPCTSDS/api/TruckDetails/GetTagTruckDetails/' + TagNo,
             type: 'GET',
@@ -454,7 +454,7 @@ function Reason()
     $.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
-	    url: 'http://apps.kpcl.com/KPCLOpsAPI/api/Reason/GetReasons',
+	    url: 'http://apps.kpcl.com/KPCTSDS/api/Reason/GetReasons',
         //url: 'http://202.83.27.199/KPCTSDS/api/Reason/GetReasons',
 	//url: 'http://182.72.244.25/KPCTSDS/api/Reason/GetReasons',
         dataType: "json",
@@ -478,7 +478,7 @@ function GetDeviceStatus()
     Adddata.UUID = $("#hiduuid").val();
     $.ajax({
         type: "POST",
-	    url: 'http://apps.kpcl.com/KPCLOpsAPI/api/Account/GetDeviceStatus',
+	    url: 'http://apps.kpcl.com/KPCTSDS/api/Account/GetDeviceStatus',
         //url: 'http://202.83.27.199/KPCTSDS/api/Account/GetDeviceStatus',
 	//url: 'http://182.72.244.25/KPCTSDS/api/Account/GetDeviceStatus',
         dataType: "json",

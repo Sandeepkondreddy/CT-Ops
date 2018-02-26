@@ -11,7 +11,7 @@ $(document).ready(function (){
     $("#home").click(function () {
         $.ajax({
             type: "GET",
-			url: "http://apps.kpcl.com/KPCLOpsAPI/api/Account/GetUserScreens/" + $("#hidusrid").val(),
+			url: "http://apps.kpcl.com/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
             //url: "http://202.83.27.199/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
 	    //url: "http://182.72.244.25/KPCTSDS/api/Account/GetUserScreens/" + $("#hidusrid").val(),
             data: '{}',
@@ -192,7 +192,7 @@ $(document).ready(function (){
 
             $.ajax({
                 type: 'POST',
-				url: 'http://apps.kpcl.com/KPCLOpsAPI/api/TallySheet/AddData',
+				url: 'http://apps.kpcl.com/KPCTSDS/api/TallySheet/AddData',
                 //url: 'http://202.83.27.199/KPCTSDS/api/TallySheet/AddData',
 		//url: 'http://182.72.244.25/KPCTSDS/api/TallySheet/AddData',
                 //url: 'http://localhost:51594/Api/TallySheet/AddData',
@@ -296,7 +296,7 @@ function GetLocations()
     $.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
-        url: 'http://apps.kpcl.com/KPCLOpsAPI/api/Location/GetLocation/' + $("#hidloctype").val(),
+        url: 'http://apps.kpcl.com/KPCTSDS/api/Location/GetLocation/' + $("#hidloctype").val(),
 		//url: 'http://202.83.27.199/KPCTSDS/api/Location/GetLocation/' + $("#hidloctype").val(),
 	//url: 'http://182.72.244.25/KPCTSDS/api/Location/GetLocation/' + $("#hidloctype").val(),
         dataType: "json",
@@ -320,7 +320,7 @@ function GetCargoCondition()
     $.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
-		url: 'http://apps.kpcl.com/KPCLOpsAPI/api/Masters/GetCargoCondition',
+		url: 'http://apps.kpcl.com/KPCTSDS/api/Masters/GetCargoCondition',
 	//url: 'http://202.83.27.199/KPCTSDS/api/Masters/GetCargoCondition',
         //url: 'http://182.72.244.25/KPCTSDS/api/Masters/GetCargoCondition',
         dataType: "json",
@@ -343,7 +343,7 @@ function GetWeatherCondition()
     $.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
-        url: 'http://apps.kpcl.com/KPCLOpsAPI/api/Masters/GetWeatherCondition',
+        url: 'http://apps.kpcl.com/KPCTSDS/api/Masters/GetWeatherCondition',
 		//url: 'http://202.83.27.199/KPCTSDS/api/Masters/GetWeatherCondition',
 	//url: 'http://182.72.244.25/KPCTSDS/api/Masters/GetWeatherCondition',
         dataType: "json",
@@ -366,7 +366,7 @@ function GetHandledCompany()
     $.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
-        url: 'http://apps.kpcl.com/KPCLOpsAPI/api/Masters/GetHandledCompany',
+        url: 'http://apps.kpcl.com/KPCTSDS/api/Masters/GetHandledCompany',
 		//url: 'http://202.83.27.199/KPCTSDS/api/Masters/GetHandledCompany',
 	//url: 'http://182.72.244.25/KPCTSDS/api/Masters/GetHandledCompany',
         dataType: "json",

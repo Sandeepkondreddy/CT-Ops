@@ -90,7 +90,7 @@ function getSDS( userr, passs)
                     type: "GET",
 					//url: "http://202.83.27.199/TestAPI/api/User/ValidateUser/" + $("#txtusername").val().trim() + "/" + $("#txtpassword").val(),	  	//Act Link.                
 					//url: "http://182.72.244.25/KPCTSDS/api/Account/ValidateUser/" + userr + "/" + passs,   //Airtel Link.
-                    url: "http://apps.kpcl.com/KPCLOpsAPI/api/Account/ValidateUser/" + userr + "/" + passs,
+                    url: "http://apps.kpcl.com/KPCTSDS/api/Account/ValidateUser/" + userr + "/" + passs,
 					data: '{}',
                     contentType: "application/json",
                     success: function(data) {
@@ -99,7 +99,7 @@ function getSDS( userr, passs)
                             $.ajax({
                                 type: "GET",
                                 //url: "http://202.83.27.199/TestAPI/api/User/GetUserScreens/" + $("#hidusrid").val(),	//Act Link.						
-								url: "http://apps.kpcl.com/KPCLOpsAPI/api/Account/GetUserScreens/" + $("#husrid").val(),
+								url: "http://apps.kpcl.com/KPCTSDS/api/Account/GetUserScreens/" + $("#husrid").val(),
 								//url: "http://182.72.244.25/KPCTSDS/api/Account/GetUserScreens/" + $("#husrid").val(),	//Airtel Link.
                                 data: '{}',
                                 contentType: "application/json",
