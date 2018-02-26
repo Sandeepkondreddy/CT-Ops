@@ -52,7 +52,7 @@ $(document).ready(function(){
 			if(sdsresult!="")
             window.location.href = sdsresult+'?user=' + btoa($("#hidusrid").val()) + '';
 			else{
-				showUserRecords();alert(user+pass);
+				showUserRecords();alert(user+pass+sdsresult);
 				window.location.href = sdsresult+'?user=' + btoa($("#hidusrid").val()) + '';
 			}
 			 $("#loading").hide();
@@ -99,7 +99,7 @@ function getSDS( userr, passs)
 					data: '{}',
                     contentType: "application/json",
                     success: function(data) {
-                        if (data[1] == 'True') {
+                        if (data[1] == 'True' || data[1] == 'TRUE') {
                             $("#husrid").val(data[0]);
                             $.ajax({
                                 type: "GET",
