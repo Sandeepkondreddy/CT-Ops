@@ -52,7 +52,7 @@ $(document).ready(function(){
 			if(sdsresult!="")
             window.location.href = sdsresult+'?user=' + btoa($("#hidusrid").val()) + '';
 			else{
-				showUserRecords();alert(user+pass+sdsresult);
+				showUserRecords();//alert(user+pass+sdsresult);
 				window.location.href = sdsresult+'?user=' + btoa($("#hidusrid").val()) + '';
 			}
 			 $("#loading").hide();
